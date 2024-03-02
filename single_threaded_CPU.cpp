@@ -127,7 +127,7 @@ int main()
     const float c1 = 1.4955; // Cognitive weight
     const float c2 = 1.4955; // Social weight
     const int t_max = 10000; // Maximum number of iterations
-    const int numParticles = 30; // Number of particles swarm, may vary
+    const int numParticles = 1024; // Number of particles swarm, may vary
 
     // Define the Q matrix, its size and result value of real solution
     // Examples are from page 9 of 'A Tutorial on Formulating and Using QUBO Models'
@@ -144,17 +144,22 @@ int main()
     //     {250, 70, 130, 310, 420, 170, 210, -1560}
     // };
 
-    // exmple from page 11
+    // exmple from page 34
     std::vector<std::vector<float>> Q = {
-        {-2,  1,  1,  0,  0},
-        { 1, -2,  0,  1,  0},
-        { 1,  0, -3,  1,  1},
-        { 0,  1,  1, -3,  1},
-        { 0,  0,  1,  1, -2}
+        {-526, 150, 160, 190, 180,  20,  40, -30, -60, -120},
+        { 150, -574, 180, 200, 200,  20,  40, -30, -60, -120},
+        { 160, 180, -688, 220, 200,  40,  80, -20, -40, -80},
+        { 190, 200, 220, -645, 240,  30,  60, -40, -80, -160},
+        { 180, 200, 200, 240, -605,  20,  40, -40, -80, -160},
+        {  20,  20,  40,  30,  20, -130,  20,   0,   0,    0},
+        {  40,  40,  80,  60,  40,  20, -240,   0,   0,    0},
+        { -30, -30, -20, -40, -40,   0,   0, 110,  20,   40},
+        { -60, -60, -40, -80, -80,   0,   0,  20, 240,   80},
+        { -120, -120, -80, -160, -160,   0,   0,  40,  80, 560}
     };
     int Q_size = Q.size();
     // const float fOptimal = -6889.0f; // Known optimal objective value for comparison
-    const float fOptimal = 5.0f;
+    const float fOptimal = -916.0f;
 
     // Initialize particles and global best
     std::vector<Particle> particles(numParticles);
@@ -222,7 +227,7 @@ int main()
     }
 
     // Calculate relative error for accuracy of found solutions
-    float relativeError = (minimalF1 - fOptimal) / fOptimal;
+    float relativeError = (minimalF1 - fOptimal) / std::abs(fOptimal);
 
     // Output the best rounded solution and its f1 value
     std::cout << "Best solution found:" << std::endl;
