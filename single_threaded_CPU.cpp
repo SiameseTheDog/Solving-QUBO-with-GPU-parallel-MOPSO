@@ -1,5 +1,6 @@
 #include <vector>
 #include <ctime>
+#include <limits>
 #include <cstdlib>
 #include <cmath>
 #include <iostream>
@@ -48,12 +49,30 @@ std::vector<float> multiplyQx(const std::vector<std::vector<float>>& Q, const st
     }
     return Y;
 }
+// Overload for std::vector<int>
+std::vector<float> multiplyQx(const std::vector<std::vector<float>>& Q, const std::vector<int>& x) {
+    std::vector<float> Y(Q.size(), 0.0f);
+    for (size_t i = 0; i < Q.size(); i++) {
+        for (size_t j = 0; j < Q[i].size(); j++) {
+            Y[i] += Q[i][j] * x[j]; // Implicit conversion of x[j] from int to float
+        }
+    }
+    return Y;
+}
 
 // Objective function f1 calculation (x'Qx)
 float f1(const std::vector<float>& Y, const std::vector<float>& x) 
 {
     float result = 0.0f;
     for (size_t i = 0; i < x.size(); i++) result += x[i] * Y[i];
+    return result;
+}
+// Overload for std::vector<int>
+float f1(const std::vector<float>& Y, const std::vector<int>& x) {
+    float result = 0.0f;
+    for (size_t i = 0; i < x.size(); i++) {
+        result += x[i] * Y[i]; // Implicit conversion of x[i] from int to float
+    }
     return result;
 }
 
@@ -140,7 +159,7 @@ int main()
         for (auto& p : particles) 
         {
             // Update particle with the PSO formula
-            updateParticle(p, globalBest, w, c1, c2, Q_size);
+            updateParticle(p, globalBest.position, w, c1, c2, Q_size);
             
             // Calculate objective function values
             std::vector<float> Y = multiplyQx(Q, p.position);
@@ -178,7 +197,7 @@ int main()
     // Round solutions and find the one with minimal f1
     for (const auto& p : particles) 
     {
-        std::vector<float> roundedSolution(Q_size);
+        std::vector<int> roundedSolution(Q_size);
 
         for (int i = 0; i < Q_size; ++i) roundedSolution[i] = std::round(p.position[i]);
         std::vector<float> Y = multiplyQx(Q, roundedSolution);
@@ -187,12 +206,12 @@ int main()
         {
             minimalF1 = currentF1;
             // Update bestRoundedSolution with integer values
-            for (size_t i = 0; i < Q_size; ++i) bestRoundedSolution[i] = static_cast<int>(std::round(p.position[i]));
+            bestRoundedSolution = roundedSolution;
         }
     }
 
     // Calculate relative error for accuracy of found solutions
-    float relativeError = (minimalF1 - optimalF1) / optimalF1;
+    float relativeError = (minimalF1 - fOptimal) / fOptimal;
 
     // Output the best rounded solution and its f1 value
     std::cout << "Best solution found:" << std::endl;
