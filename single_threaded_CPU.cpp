@@ -130,20 +130,31 @@ int main()
     const int numParticles = 30; // Number of particles swarm, may vary
 
     // Define the Q matrix, its size and result value of real solution
-    // Example is from 'A Tutorial on Formulating and Using QUBO Models'
-    std::vector<std::vector<float>> Q = 
-    {
-        {-3525, 175, 325, 775, 1050, 425, 525, 250},
-        {175, -1113, 91, 217, 294, 119, 147, 70},
-        {325, 91, -1989, 403, 546, 221, 273, 130},
-        {775, 217, 403, -4185, 1302, 527, 651, 310},
-        {1050, 294, 546, 1302, -5208, 714, 882, 420},
-        {425, 119, 221, 527, 714, -2533, 357, 170},
-        {525, 147, 273, 651, 882, 357, -3045, 210},
-        {250, 70, 130, 310, 420, 170, 210, -1560}
+    // Examples are from page 9 of 'A Tutorial on Formulating and Using QUBO Models'
+    
+    // std::vector<std::vector<float>> Q = 
+    // {
+    //     {-3525, 175, 325, 775, 1050, 425, 525, 250},
+    //     {175, -1113, 91, 217, 294, 119, 147, 70},
+    //     {325, 91, -1989, 403, 546, 221, 273, 130},
+    //     {775, 217, 403, -4185, 1302, 527, 651, 310},
+    //     {1050, 294, 546, 1302, -5208, 714, 882, 420},
+    //     {425, 119, 221, 527, 714, -2533, 357, 170},
+    //     {525, 147, 273, 651, 882, 357, -3045, 210},
+    //     {250, 70, 130, 310, 420, 170, 210, -1560}
+    // };
+
+    // exmple from page 11
+    std::vector<std::vector<float>> Q = {
+        {-2,  1,  1,  0,  0},
+        { 1, -2,  0,  1,  0},
+        { 1,  0, -3,  1,  1},
+        { 0,  1,  1, -3,  1},
+        { 0,  0,  1,  1, -2}
     };
     int Q_size = Q.size();
-    const float fOptimal = -6889.0f; // Known optimal objective value for comparison
+    // const float fOptimal = -6889.0f; // Known optimal objective value for comparison
+    const float fOptimal = 5.0f;
 
     // Initialize particles and global best
     std::vector<Particle> particles(numParticles);
