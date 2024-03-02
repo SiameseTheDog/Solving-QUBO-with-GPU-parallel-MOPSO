@@ -5,6 +5,6 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
 
 
 
-files:
+Files:
 
 single_threaded_CPU.cpp - implementation of sequential programming without any parallelization
