@@ -230,9 +230,6 @@ int main()
         }
     }
     
-    std::vector<int> bestRoundedSolution(Q_size); // This will store the best solution after rounding
-    float minimalF1 = std::numeric_limits<float>::max();
-
     auto endSingleThreaded = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsedSingleThreaded = endSingleThreaded - startSingleThreaded;
 ///////////////////////////////End of Singled Threaded //////////////////////////////
@@ -283,17 +280,16 @@ int main()
             }
         }
     }
-    
-    std::vector<int> bestRoundedSolution(Q_size); // This will store the best solution after rounding
-    float minimalF1 = std::numeric_limits<float>::max();
 
     auto endMultiThreaded = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsedMultiThreaded = endMultiThreaded - startMultiThreaded;
-    ///////////////////////////////End of Singled Threaded //////////////////////////////
+    ///////////////////////////////End of Multiple Threaded //////////////////////////////
 
 
 
     // Round solutions and find the one with minimal f1
+    std::vector<int> bestRoundedSolution(Q_size); // This will store the best solution after rounding
+    float minimalF1 = std::numeric_limits<float>::max();
     for (const auto& p : particles) 
     {
         std::vector<int> roundedSolution(Q_size);
