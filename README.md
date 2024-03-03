@@ -10,7 +10,7 @@ Files:
 single_threaded_CPU.cpp - implementation of sequential programming without any parallelization
 
 
-CPUprogramming.cpp - implementation of single thread and multiple threads using CBLAS with timing.
+CPUprogramming.cpp - implementation of both single thread and multiple threads using CBLAS with timing. Error is calculated on results from multi-threaded way.
 To complie, run 
 ```
 g++ -o CPUprogramming CPUprogramming.cpp -lopenblas -O3
