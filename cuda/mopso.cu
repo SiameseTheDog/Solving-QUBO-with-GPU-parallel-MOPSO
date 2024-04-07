@@ -4,7 +4,6 @@
 #include <cublas_v2.h>
 
 #include <chrono>
-#include <vector>
 #include <ctime>
 #include <limits>
 #include <cstdlib>
