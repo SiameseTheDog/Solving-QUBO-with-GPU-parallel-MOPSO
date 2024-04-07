@@ -1,5 +1,3 @@
-// #include <cublas_v2.h>
-#include <cuda_runtime.h>
 #include <curand_kernel.h>
 #include <cublas_v2.h>
 
@@ -30,6 +28,7 @@ __global__ void initializeParticleKernel(
             int posIdx = idx * Q_size + i;
             float randVal = curand_uniform(&state);
             d_particlesPositions[posIdx] = randVal; 
+            printf("Random value at idx %d, i %d: %f\n", idx, i, randVal);
             d_particlesVelocities[posIdx] = 0.0f;
             d_personalBestPositions[posIdx] = d_particlesPositions[posIdx];
             d_globalBestPositions[posIdx] = 0.0f;
@@ -42,45 +41,6 @@ __global__ void initializeParticleKernel(
     }
 }
 
-
-// // Function to perform matrix-vector multiplication (Qx) using BLAS
-// std::vector<std::vector<float>> multiplyQXBLAS(const std::vector<std::vector<float>>& Q, const std::vector<std::vector<float>>& X, int Q_size, int numParticles) {
-//     // Flatten the input matrices Q and X for CBLAS
-//     std::vector<float> Q_flat(Q_size * Q_size);
-//     std::vector<float> X_flat(Q_size * numParticles);
-//     for (int i = 0; i < Q_size; ++i) {
-//         for (int j = 0; j < Q_size; ++j) {
-//             Q_flat[i * Q_size + j] = Q[i][j];
-//         }
-//     }
-//     for (int i = 0; i < Q_size; ++i) {
-//         for (int j = 0; j < numParticles; ++j) {
-//             X_flat[i * numParticles + j] = X[i][j];
-//         }
-//     }
-
-//     // Allocate space for the result matrix Y
-//     std::vector<float> Y_flat(Q_size * numParticles);
-
-//     // Perform the matrix multiplication using CBLAS
-//     cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans,
-//                 Q_size, numParticles, Q_size, // dimensions of matrices
-//                 1.0, // alpha
-//                 &Q_flat[0], Q_size, // A and its leading dimension
-//                 &X_flat[0], numParticles, // B and its leading dimension
-//                 0.0, // beta
-//                 &Y_flat[0], numParticles); // C and its leading dimension
-
-//     // Convert the flat result matrix back into a vector of vectors
-//     std::vector<std::vector<float>> Y(Q_size, std::vector<float>(numParticles));
-//     for (int i = 0; i < Q_size; ++i) {
-//         for (int j = 0; j < numParticles; ++j) {
-//             Y[i][j] = Y_flat[i * numParticles + j];
-//         }
-//     }
-
-//     return Y;
-// }
 
 // // Objective function f1 calculation (x'Qx = inner product of ith column of Y with ith column of X)
 // float f1(const std::vector<std::vector<float>>& Y, const std::vector<std::vector<float>>& X, size_t particleIndex) 
@@ -156,8 +116,8 @@ int main()
     const float w = 0.729;   // Inertia weight
     const float c1 = 1.4955; // Cognitive weight
     const float c2 = 1.4955; // Social weight
-    const int t_max = 10000; // Maximum number of iterations
-    const int numParticles = 128; // Number of particles swarm, may vary
+    const int t_max = 1; // Maximum number of iterations
+    const int numParticles = 32; // Number of particles swarm, may vary
 
     // Define the Q matrix, its size and result value of real solution
     // Examples are from page 9 of 'A Tutorial on Formulating and Using QUBO Models'
@@ -240,6 +200,13 @@ int main()
         Q_size, 
         numParticles
     );
+    cudaDeviceSynchronize();
+    // Check for any errors launching the kernel
+    cudaError_t error = cudaGetLastError();
+    if (error != cudaSuccess) {
+        fprintf(stderr, "Kernel launch failed: %s\n", cudaGetErrorString(error));
+    }
+	
 
     // Copy back the particles to host
     cudaMemcpy(h_particlesPositions, d_particlesPositions, numParticles * Q_size * sizeof(float), cudaMemcpyDeviceToHost);
@@ -249,6 +216,14 @@ int main()
     cudaMemcpy(h_globalBestValues, d_globalBestValues, numParticles * 2 * sizeof(float), cudaMemcpyDeviceToHost);
     cudaMemcpy(h_globalBestPositions, d_globalBestPositions, numParticles * Q_size * sizeof(float), cudaMemcpyDeviceToHost);
 
+    // CHeck initialization
+    // std::cout << "positions:" << std::endl;
+    // for (int i = 0; i < numParticles; ++i) {
+    //     for (int j = 0; j < Q_size; ++j) {
+    //     std::cout << h_particlesPositions[i * Q_size + j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
     /******************************** End of Position Initialization ********************************/
 
 
@@ -263,16 +238,12 @@ int main()
     cudaMalloc(&d_Q, Q_size * Q_size * sizeof(float));
     cudaMemcpy(d_Y, h_Y, Q_size * Q_size * sizeof(float), cudaMemcpyDeviceToHost);
     // Initialize CUBLAS
-    cublasHandle_t handle;
-    cublasStatus_t status = cublasCreate(&handle);
-    if (status != CUBLAS_STATUS_SUCCESS) {
-        std::cerr << "CUBLAS initialization error!!!!!!!!\n";
-        return EXIT_FAILURE;
-    }
-    int m = numParticles, n = Q_size, k = Q_size;
-    int lda = m, ldb = n, ldc = m;
-    float alpha = 1.0f;
-    float beta = 0.0f;
+    // cublasHandle_t handle;
+    // cublasCreate(&handle);
+    // int m = numParticles, n = Q_size, k = Q_size;
+    // int lda = m, ldb = n, ldc = m;
+    // float alpha = 1.0f;
+    // float beta = 0.0f;
 
     for (int t = 1; t <= t_max; ++t) 
     {
@@ -283,41 +254,26 @@ int main()
         // But in GPU: we actually get on host (Q^T x X^T)^T = ((X x Q)^T)^T = X x Q
         // Therefor we have to do in cuBLAS Y^T = X^T x Q^T where C = Y^T, A = X^T = h_particlesPositions, B = Q^T
         // For cuBlas, that is we do X x Q = h_particlesPositions^T x Q on it, so h_particlesPositions need transpose
-        status = cublasSgemm(handle, CUBLAS_OP_T, CUBLAS_OP_N, n, m, k, &alpha, h_particlesPositions, lda, d_Q, ldb, &beta, d_Y, ldc);
-        cudaMemcpy(h_Y, d_Y, Q_size * numParticles * sizeof(float), cudaMemcpyDeviceToHost);
-        // for (size_t particleIndex = 0; particleIndex < particles.size(); ++particleIndex)
-        // {
-        //     auto& p = particles[particleIndex];
+        // cublasSgemm(handle, CUBLAS_OP_T, CUBLAS_OP_N, n, m, k, &alpha, h_particlesPositions, lda, d_Q, ldb, &beta, d_Y, ldc);
+        // cudaMemcpy(h_Y, d_Y, Q_size * numParticles * sizeof(float), cudaMemcpyDeviceToHost);
 
-        //     // Calculate objective function values
-        //     std::vector<float> objectives = {f1(Y, X, particleIndex), f2(p.position)};
-
-        //     if (dominates(objectives, p.personalBestValues)) 
-        //     {
-        //         p.personalBestPosition = p.position;
-        //         p.personalBestValues = objectives;
-        //     }
-        // }
+        // // Update personal best
 
         // // Build the archive from non-dominated personal bests relative to the first particle's personal best
-        // std::vector<Particle> archive;
-        // for (const auto& p : particles) 
-        // {
-        //     if (!dominates(particles[0].personalBestValues, p.personalBestValues)) archive.push_back(p);
-        // }
+    
 
         // // Update velocities and positions based on the archive
-        // for (auto& p : particles) 
-        // {
-        //     if (!archive.empty()) 
-        //     {
-        //         int randomIndex = rand() % archive.size();
-        //         const auto& globalBest = archive[randomIndex];
-        //         updateParticle(p, globalBest.personalBestPosition, w, c1, c2, Q_size);
-        //     }
-        // }
     }
-    
+
+    // // Check Matrix Y
+    // std::cout << "Matrix Y:" << std::endl;
+    // for (int i = 0; i < Q_size; ++i) {
+    //     for (int j = 0; j < numParticles; ++j) {
+    //     std::cout << h_Y[i * numParticles + j] << " ";
+    //     }
+    //     std::cout << std::endl;
+    // }
+
     // Stop recording
     // End timing
     auto end = std::chrono::high_resolution_clock::now();
@@ -366,7 +322,7 @@ int main()
 
     // Clean up
     // Destroy CUBLAS handle
-    cublasDestroy(handle);
+    // cublasDestroy(handle);
 
     // Free device memory
     cudaFree(d_particlesPositions);
@@ -375,8 +331,8 @@ int main()
     cudaFree(d_personalBestValues);
     cudaFree(d_globalBestPositions);
     cudaFree(d_globalBestValues);
-    cudaFree(d_Y);
-    cudaFree(d_Q);
+    // cudaFree(d_Y);
+    // cudaFree(d_Q);
 
     // Free host memory
     delete[] h_particlesPositions;
