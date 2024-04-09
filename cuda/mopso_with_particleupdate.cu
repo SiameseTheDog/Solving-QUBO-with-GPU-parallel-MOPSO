@@ -188,7 +188,7 @@ int main(int argc, char* argv[]) {
     const float c1 = 1.4955; // Cognitive weight
     const float c2 = 1.4955; // Social weight
     const int t_max = 1; // Maximum number of iterations
-    const int numParticles = std::stoi(argc[2]); // Number of particles swarm, may vary
+    int numParticles = std::stoi(argc[2]); // Number of particles swarm, may vary
 
     // Define the Q matrix, its size and result value of real solution
     // Examples are from page 9 of 'A Tutorial on Formulating and Using QUBO Models'
