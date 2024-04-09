@@ -154,6 +154,20 @@ bool readMatrix(const std::string& filePath, std::vector<float>& Q, int& Q_size)
     return true;
 }
 
+// Function to calculate the objective value based on the final particle positions
+float calculateObjectiveValue(float* positions, int Q_size, int numParticles) {
+    // Calculate the objective value based on the final particle positions
+    // Replace this with your actual objective function calculation
+    float objectiveValue = 0.0f;
+    for (int i = 0; i < numParticles; ++i) {
+        for (int j = 0; j < Q_size; ++j) {
+            // Sum up the values of the particle positions as a simple example
+            objectiveValue += positions[i * Q_size + j];
+        }
+    }
+    return objectiveValue;
+}
+
 int main(int argc, char* argv[]) {
     if (argc != 3) {
         std::cerr << "Usage: " << argv[0] << " <file_path> <num_particles>" << std::endl;
@@ -241,7 +255,17 @@ int main(int argc, char* argv[]) {
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     std::cout << "GPU execution time: " << duration / 1000000.0f << " seconds\n";
-    std::cout << "Best f1 value found:" << minf1 << std::endl;
+
+    // Copy particle positions from device to host
+    cudaMemcpy(h_particlesPositions, d_particlesPositions, numParticles * Q_size * sizeof(float), cudaMemcpyDeviceToHost);
+
+    // Calculate objective value
+    float objectiveValue = calculateObjectiveValue(h_particlesPositions, Q_size, numParticles);
+
+    // Output results
+    std::cout << "Objective Value: " << objectiveValue << std::endl;
+    std::cout << "Q_size: " << Q_size << std::endl;
+    std::cout << "Number of particles: " << numParticles << std::endl;
 
     // Clean up
     cudaFree(d_particlesPositions);
