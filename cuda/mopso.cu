@@ -474,8 +474,6 @@ int main(int argc, char* argv[]) {
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     std::cout << "GPU execution time: " << duration / 1000000.0f << " seconds\n";
     std::cout << "Best f1 value found:" << minf1 << std::endl;
-    // Print the number of particles
-    std::cout << "Number of particles: " << numParticles << std::endl;
 
     // Calculate relative error for accuracy of found solutions
     // float relativeError = (minf1 - fOptimal) / std::abs(fOptimal);
