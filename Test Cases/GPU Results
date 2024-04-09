@@ -1,0 +1,270 @@
+Q_size: 50
+GPU execution time: 0.184433 seconds
+Best f1 value found:-886
+Q_size: 60
+GPU execution time: 0.165917 seconds
+Best f1 value found:-518
+Q_size: 70
+GPU execution time: 0.16546 seconds
+Best f1 value found:-1006
+Q_size: 80
+GPU execution time: 0.165844 seconds
+Best f1 value found:-2126
+Q_size: 50
+GPU execution time: 0.169203 seconds
+Best f1 value found:-234
+Q_size: 30
+GPU execution time: 0.171146 seconds
+Best f1 value found:-606
+Q_size: 30
+GPU execution time: 0.165203 seconds
+Best f1 value found:-1314
+Q_size: 100
+GPU execution time: 0.166356 seconds
+Best f1 value found:-1517
+Q_size: 20
+GPU execution time: 0.165923 seconds
+Best f1 value found:0
+Q_size: 30
+GPU execution time: 0.165766 seconds
+Best f1 value found:0
+Q_size: 40
+GPU execution time: 0.16641 seconds
+Best f1 value found:0
+Q_size: 50
+GPU execution time: 0.167417 seconds
+Best f1 value found:0
+Q_size: 60
+GPU execution time: 0.170779 seconds
+Best f1 value found:0
+Q_size: 70
+GPU execution time: 0.165759 seconds
+Best f1 value found:0
+Q_size: 80
+GPU execution time: 0.165543 seconds
+Best f1 value found:0
+Q_size: 90
+GPU execution time: 0.169294 seconds
+Best f1 value found:0
+Q_size: 100
+GPU execution time: 0.169544 seconds
+Best f1 value found:0
+Q_size: 125
+GPU execution time: 0.171404 seconds
+Best f1 value found:0
+Q_size: 40
+GPU execution time: 0.165949 seconds
+Best f1 value found:-1355
+Q_size: 50
+GPU execution time: 0.165781 seconds
+Best f1 value found:-958
+Q_size: 60
+GPU execution time: 0.1656 seconds
+Best f1 value found:-1301
+Q_size: 70
+GPU execution time: 0.165915 seconds
+Best f1 value found:-941
+Q_size: 80
+GPU execution time: 0.170537 seconds
+Best f1 value found:-1435
+Q_size: 90
+GPU execution time: 0.166128 seconds
+Best f1 value found:-1233
+Q_size: 100
+GPU execution time: 0.165767 seconds
+Best f1 value found:-866
+Q_size: 100
+GPU execution time: 0.174672 seconds
+Best f1 value found:-913
+Q_size: 100
+GPU execution time: 0.170273 seconds
+Best f1 value found:-703
+Q_size: 100
+GPU execution time: 0.165737 seconds
+Best f1 value found:-1351
+Q_size: 100
+GPU execution time: 0.16487 seconds
+Best f1 value found:-1827
+Q_size: 100
+GPU execution time: 0.165183 seconds
+Best f1 value found:-1941
+Q_size: 100
+GPU execution time: 0.17065 seconds
+Best f1 value found:-2093
+Q_size: 100
+GPU execution time: 0.16454 seconds
+Best f1 value found:-2183
+Q_size: 100
+GPU execution time: 0.166252 seconds
+Best f1 value found:-1438
+Q_size: 100
+GPU execution time: 0.172315 seconds
+Best f1 value found:-1224
+Q_size: 100
+GPU execution time: 0.167753 seconds
+Best f1 value found:-4943
+Q_size: 200
+GPU execution time: 0.16628 seconds
+Best f1 value found:-3982
+Q_size: 200
+GPU execution time: 0.166848 seconds
+Best f1 value found:-1947
+Q_size: 200
+GPU execution time: 0.171593 seconds
+Best f1 value found:-2328
+Q_size: 200
+GPU execution time: 0.16593 seconds
+Best f1 value found:-444
+Q_size: 200
+GPU execution time: 0.172331 seconds
+Best f1 value found:-4179
+Q_size: 500
+GPU execution time: 0.187906 seconds
+Best f1 value found:-2868
+Q_size: 500
+GPU execution time: 0.178882 seconds
+Best f1 value found:-5176
+Q_size: 500
+GPU execution time: 0.17947 seconds
+Best f1 value found:-1451
+Q_size: 500
+GPU execution time: 0.179128 seconds
+Best f1 value found:-13621
+Q_size: 500
+GPU execution time: 0.179189 seconds
+Best f1 value found:-2145
+Q_size: 50
+GPU execution time: 0.180795 seconds
+Best f1 value found:-886
+Q_size: 60
+GPU execution time: 0.166222 seconds
+Best f1 value found:-518
+Q_size: 70
+GPU execution time: 0.168792 seconds
+Best f1 value found:-1006
+Q_size: 80
+GPU execution time: 0.169593 seconds
+Best f1 value found:-2126
+Q_size: 50
+GPU execution time: 0.166382 seconds
+Best f1 value found:-234
+Q_size: 30
+GPU execution time: 0.16669 seconds
+Best f1 value found:-606
+Q_size: 30
+GPU execution time: 0.165674 seconds
+Best f1 value found:-1314
+Q_size: 100
+GPU execution time: 0.170029 seconds
+Best f1 value found:-1517
+Q_size: 20
+GPU execution time: 0.171464 seconds
+Best f1 value found:0
+Q_size: 30
+GPU execution time: 0.165382 seconds
+Best f1 value found:0
+Q_size: 40
+GPU execution time: 0.172429 seconds
+Best f1 value found:0
+Q_size: 50
+GPU execution time: 0.170825 seconds
+Best f1 value found:0
+Q_size: 60
+GPU execution time: 0.164931 seconds
+Best f1 value found:0
+Q_size: 70
+GPU execution time: 0.16601 seconds
+Best f1 value found:0
+Q_size: 80
+GPU execution time: 0.17112 seconds
+Best f1 value found:0
+Q_size: 90
+GPU execution time: 0.165969 seconds
+Best f1 value found:0
+Q_size: 100
+GPU execution time: 0.172842 seconds
+Best f1 value found:0
+Q_size: 125
+GPU execution time: 0.171057 seconds
+Best f1 value found:0
+Q_size: 40
+GPU execution time: 0.169365 seconds
+Best f1 value found:-1355
+Q_size: 50
+GPU execution time: 0.167457 seconds
+Best f1 value found:-958
+Q_size: 60
+GPU execution time: 0.171554 seconds
+Best f1 value found:-1301
+Q_size: 70
+GPU execution time: 0.165611 seconds
+Best f1 value found:-941
+Q_size: 80
+GPU execution time: 0.169363 seconds
+Best f1 value found:-1435
+Q_size: 90
+GPU execution time: 0.17195 seconds
+Best f1 value found:-1233
+Q_size: 100
+GPU execution time: 0.171597 seconds
+Best f1 value found:-866
+Q_size: 100
+GPU execution time: 0.167484 seconds
+Best f1 value found:-913
+Q_size: 100
+GPU execution time: 0.16947 seconds
+Best f1 value found:-703
+Q_size: 100
+GPU execution time: 0.172479 seconds
+Best f1 value found:-1351
+Q_size: 100
+GPU execution time: 0.17059 seconds
+Best f1 value found:-1827
+Q_size: 100
+GPU execution time: 0.17087 seconds
+Best f1 value found:-1941
+Q_size: 100
+GPU execution time: 0.165697 seconds
+Best f1 value found:-2093
+Q_size: 100
+GPU execution time: 0.165639 seconds
+Best f1 value found:-2183
+Q_size: 100
+GPU execution time: 0.171808 seconds
+Best f1 value found:-1438
+Q_size: 100
+GPU execution time: 0.16648 seconds
+Best f1 value found:-1224
+Q_size: 100
+GPU execution time: 0.171159 seconds
+Best f1 value found:-4943
+Q_size: 200
+GPU execution time: 0.165708 seconds
+Best f1 value found:-3982
+Q_size: 200
+GPU execution time: 0.172882 seconds
+Best f1 value found:-1947
+Q_size: 200
+GPU execution time: 0.166702 seconds
+Best f1 value found:-2328
+Q_size: 200
+GPU execution time: 0.173085 seconds
+Best f1 value found:-444
+Q_size: 200
+GPU execution time: 0.166971 seconds
+Best f1 value found:-4179
+Q_size: 500
+GPU execution time: 0.174809 seconds
+Best f1 value found:-2868
+Q_size: 500
+GPU execution time: 0.174642 seconds
+Best f1 value found:-5176
+Q_size: 500
+GPU execution time: 0.180466 seconds
+Best f1 value found:-1451
+Q_size: 500
+GPU execution time: 0.177986 seconds
+Best f1 value found:-13621
+Q_size: 500
+GPU execution time: 0.178963 seconds
+Best f1 value found:-2145
