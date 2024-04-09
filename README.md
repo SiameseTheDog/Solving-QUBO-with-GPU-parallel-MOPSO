@@ -20,3 +20,13 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
   ./CPUprogramming
   ```
 
+- mopso.cu
+  To complie, using command with Makefile
+  ```
+  make
+  ```
+  To run, use command
+  ```
+  ./mopso <TestCaseFileName>
+  ```
+  The test case matrix shoule be in .txt format. The first line in txt file should be the number of rows and starting from the second line, it should list the matrix numbers separated by spaces.
