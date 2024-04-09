@@ -241,6 +241,7 @@ int main(int argc, char* argv[]) {
     auto end = std::chrono::high_resolution_clock::now();
     auto duration = std::chrono::duration_cast<std::chrono::microseconds>(end - start).count();
     std::cout << "GPU execution time: " << duration / 1000000.0f << " seconds\n";
+    std::cout << "Best f1 value found:" << minf1 << std::endl;
 
     // Clean up
     cudaFree(d_particlesPositions);
