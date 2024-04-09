@@ -179,6 +179,9 @@ int main(int argc, char* argv[]) {
     //     std::cout << std::endl;
     // }
 
+    // Print the number of particles
+    std::cout << "Number of particles: " << numParticles << std::endl;
+
     // Initialize random seed
     unsigned int seed = static_cast<unsigned>(time(nullptr));
     srand(seed);
