@@ -26,6 +26,9 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
   ```
   sbatch cpu.sbatch
   ```
+
+- CPU_result.zip - where all result logs are stored
+
   
 - cuda/mopso.cu
   
