@@ -9,8 +9,8 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
 ## Files:
 
 
-- CPUprogramming.cpp - implementation of both single thread and multiple threads using CBLAS with timing. Error is calculated on results from multi-threaded way.
-  This will store all info above in a file names "CPU_output_${numParticles}.log".
+- CPUprogramming.cpp - implementation of both single thread and multiple threads using CBLAS with timing.
+  This will store all info above in a file names "CPU_output_${numParticles}.log". Change the number of threads for openblas to switch between multi and single thread.
   
   To complie, using command 
   ```
@@ -18,7 +18,7 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
   ```
   To run, use command
   ```
-  ./CPU <matrixFileName>
+  ./CPU <matrixFileName> <numParticles>
   ```
   
 - CPU.sbatch - submit all task cases and record running time, target values and CPU info. Remember to change number of particles.
@@ -28,6 +28,7 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
   ```
   
 - cuda/mopso.cu
+  
   To complie, using command with Makefile
   ```
   make
