@@ -7,7 +7,6 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
 
 
 ## Files:
-- single_threaded_CPU.cpp - implementation of sequential programming without any parallelization
 
 
 - CPUprogramming.cpp - implementation of both single thread and multiple threads using CBLAS with timing. Error is calculated on results from multi-threaded way.
@@ -19,8 +18,14 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
   ```
   ./CPU <matrixFileName>
   ```
-
-- mopso.cu
+  
+- CPU.sbatch - submit all task cases and record running time, target values and CPU info. Remember to change number of particles.
+  To run, using command
+  ```
+  sbatch cpu.sbatch
+  ```
+  
+- cuda/mopso.cu
   To complie, using command with Makefile
   ```
   make
