@@ -13,11 +13,11 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
 - CPUprogramming.cpp - implementation of both single thread and multiple threads using CBLAS with timing. Error is calculated on results from multi-threaded way.
   To complie, using command 
   ```
-  g++ -o CPUprogramming CPUprogramming.cpp -lopenblas -O3
+  g++ CPUprogramming.cpp -lopenblas -O3 -march=native -funroll-loops -o CPU
   ```
   To run, use command
   ```
-  ./CPUprogramming
+  ./CPU <matrixFileName>
   ```
 
 - mopso.cu
