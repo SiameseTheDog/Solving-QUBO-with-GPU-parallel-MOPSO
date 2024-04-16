@@ -1,0 +1,142 @@
+
+GPU execution time for 4096 particles: 2.52187 seconds
+Best solution found for../Test Cases/test_case_A1.txt:  -2053
+
+GPU execution time for 4096 particles: 3.07123 seconds
+Best solution found for../Test Cases/test_case_A2.txt:  -3881
+
+GPU execution time for 4096 particles: 3.51852 seconds
+Best solution found for../Test Cases/test_case_A3.txt:  -5638
+
+GPU execution time for 4096 particles: 2.98153 seconds
+Best solution found for../Test Cases/test_case_A4.txt:  -5821
+
+GPU execution time for 4096 particles: 3.11363 seconds
+Best solution found for../Test Cases/test_case_A5.txt:  -3577
+
+GPU execution time for 4096 particles: 1.67078 seconds
+Best solution found for../Test Cases/test_case_A6.txt:  -2697
+
+GPU execution time for 4096 particles: 1.61724 seconds
+Best solution found for../Test Cases/test_case_A7.txt:  -3577
+
+GPU execution time for 4096 particles: 8.97026 seconds
+Best solution found for../Test Cases/test_case_A8.txt:  -6427
+
+
+GPU execution time for 4096 particles: 1.29129 seconds
+Best solution found for../Test Cases/test_case_B1.txt:  -91
+
+GPU execution time for 4096 particles: 1.61372 seconds
+Best solution found for../Test Cases/test_case_B2.txt:  -103
+
+GPU execution time for 4096 particles: 2.23818 seconds
+Best solution found for../Test Cases/test_case_B3.txt:  -91
+
+GPU execution time for 4096 particles: 2.02352 seconds
+Best solution found for../Test Cases/test_case_B4.txt:  -68
+
+GPU execution time for 4096 particles: 3.41716 seconds
+Best solution found for../Test Cases/test_case_B5.txt:  -38
+
+GPU execution time for 4096 particles: 3.32255 seconds
+Best solution found for../Test Cases/test_case_B6.txt:  266
+
+GPU execution time for 4096 particles: 4.52336 seconds
+Best solution found for../Test Cases/test_case_B7.txt:  2152
+
+GPU execution time for 4096 particles: 4.56191 seconds
+Best solution found for../Test Cases/test_case_B8.txt:  1667
+
+GPU execution time for 4096 particles: 9.13359 seconds
+Best solution found for../Test Cases/test_case_B9.txt:  52
+
+GPU execution time for 4096 particles: 9.01102 seconds
+Best solution found for../Test Cases/test_case_B10.txt:  17423
+
+
+GPU execution time for 4096 particles: 2.0286 seconds
+Best solution found for../Test Cases/test_case_C1.txt:  -4326
+
+GPU execution time for 4096 particles: 3.13754 seconds
+Best solution found for../Test Cases/test_case_C2.txt:  -4572
+
+GPU execution time for 4096 particles: 3.66067 seconds
+Best solution found for../Test Cases/test_case_C3.txt:  -4293
+
+GPU execution time for 4096 particles: 4.08132 seconds
+Best solution found for../Test Cases/test_case_C4.txt:  -4629
+
+GPU execution time for 4096 particles: 7.6234 seconds
+Best solution found for../Test Cases/test_case_C5.txt:  -5651
+
+GPU execution time for 4096 particles: 4.20939 seconds
+Best solution found for../Test Cases/test_case_C6.txt:  -4136
+
+GPU execution time for 4096 particles: 4.54878 seconds
+Best solution found for../Test Cases/test_case_C7.txt:  -4102
+
+
+GPU execution time for 4096 particles: 8.77365 seconds
+Best solution found for../Test Cases/test_case_D1.txt:  -4723
+
+GPU execution time for 4096 particles: 4.32918 seconds
+Best solution found for../Test Cases/test_case_D2.txt:  -5437
+
+GPU execution time for 4096 particles: 8.87261 seconds
+Best solution found for../Test Cases/test_case_D3.txt:  -6469
+
+GPU execution time for 4096 particles: 4.48104 seconds
+Best solution found for../Test Cases/test_case_D4.txt:  -7375
+
+GPU execution time for 4096 particles: 4.26604 seconds
+Best solution found for../Test Cases/test_case_D5.txt:  -7163
+
+GPU execution time for 4096 particles: 9.192 seconds
+Best solution found for../Test Cases/test_case_D6.txt:  -9405
+
+GPU execution time for 4096 particles: 8.48705 seconds
+Best solution found for../Test Cases/test_case_D7.txt:  -10978
+
+GPU execution time for 4096 particles: 9.21656 seconds
+Best solution found for../Test Cases/test_case_D8.txt:  -10677
+
+GPU execution time for 4096 particles: 8.90627 seconds
+Best solution found for../Test Cases/test_case_D9.txt:  -10438
+
+GPU execution time for 4096 particles: 4.18653 seconds
+Best solution found for../Test Cases/test_case_D10.txt:  -15646
+
+
+GPU execution time for 4096 particles: 16.826 seconds
+Best solution found for../Test Cases/test_case_E1.txt:  -8951
+
+GPU execution time for 4096 particles: 15.7502 seconds
+Best solution found for../Test Cases/test_case_E2.txt:  -9963
+
+GPU execution time for 4096 particles: 8.31362 seconds
+Best solution found for../Test Cases/test_case_E3.txt:  -17128
+
+GPU execution time for 4096 particles: 16.95 seconds
+Best solution found for../Test Cases/test_case_E4.txt:  -14655
+
+GPU execution time for 4096 particles: 16.488 seconds
+Best solution found for../Test Cases/test_case_E5.txt:  -19048
+
+
+GPU execution time for 4096 particles: 36.9476 seconds
+Best solution found for../Test Cases/test_case_F1.txt:  -23053
+
+GPU execution time for 4096 particles: 29.9296 seconds
+Best solution found for../Test Cases/test_case_F2.txt:  -36834
+
+GPU execution time for 4096 particles: 28.1984 seconds
+Best solution found for../Test Cases/test_case_F3.txt:  -57545
+
+GPU execution time for 4096 particles: 37.6369 seconds
+Best solution found for../Test Cases/test_case_F4.txt:  -56129
+
+GPU execution time for 4096 particles: 36.927 seconds
+Best solution found for../Test Cases/test_case_F5.txt:  -68598
+
+

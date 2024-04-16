@@ -1,0 +1,142 @@
+
+GPU execution time for 2048 particles: 2.47803 seconds
+Best solution found for../Test Cases/test_case_A1.txt:  -2016
+
+GPU execution time for 2048 particles: 2.24151 seconds
+Best solution found for../Test Cases/test_case_A2.txt:  -3833
+
+GPU execution time for 2048 particles: 2.17785 seconds
+Best solution found for../Test Cases/test_case_A3.txt:  -4814
+
+GPU execution time for 2048 particles: 2.8825 seconds
+Best solution found for../Test Cases/test_case_A4.txt:  -5951
+
+GPU execution time for 2048 particles: 1.58124 seconds
+Best solution found for../Test Cases/test_case_A5.txt:  -3498
+
+GPU execution time for 2048 particles: 1.14202 seconds
+Best solution found for../Test Cases/test_case_A6.txt:  -2697
+
+GPU execution time for 2048 particles: 1.07343 seconds
+Best solution found for../Test Cases/test_case_A7.txt:  -3538
+
+GPU execution time for 2048 particles: 3.45725 seconds
+Best solution found for../Test Cases/test_case_A8.txt:  -6039
+
+
+GPU execution time for 2048 particles: 0.84107 seconds
+Best solution found for../Test Cases/test_case_B1.txt:  -91
+
+GPU execution time for 2048 particles: 1.15943 seconds
+Best solution found for../Test Cases/test_case_B2.txt:  -50
+
+GPU execution time for 2048 particles: 1.3588 seconds
+Best solution found for../Test Cases/test_case_B3.txt:  332
+
+GPU execution time for 2048 particles: 1.90925 seconds
+Best solution found for../Test Cases/test_case_B4.txt:  -61
+
+GPU execution time for 2048 particles: 1.70473 seconds
+Best solution found for../Test Cases/test_case_B5.txt:  -63
+
+GPU execution time for 2048 particles: 2.03164 seconds
+Best solution found for../Test Cases/test_case_B6.txt:  711
+
+GPU execution time for 2048 particles: 2.45856 seconds
+Best solution found for../Test Cases/test_case_B7.txt:  2189
+
+GPU execution time for 2048 particles: 3.03185 seconds
+Best solution found for../Test Cases/test_case_B8.txt:  3122
+
+GPU execution time for 2048 particles: 3.30655 seconds
+Best solution found for../Test Cases/test_case_B9.txt:  3914
+
+GPU execution time for 2048 particles: 3.26115 seconds
+Best solution found for../Test Cases/test_case_B10.txt:  11772
+
+
+GPU execution time for 2048 particles: 1.37378 seconds
+Best solution found for../Test Cases/test_case_C1.txt:  -4103
+
+GPU execution time for 2048 particles: 1.8441 seconds
+Best solution found for../Test Cases/test_case_C2.txt:  -4388
+
+GPU execution time for 2048 particles: 2.2005 seconds
+Best solution found for../Test Cases/test_case_C3.txt:  -3974
+
+GPU execution time for 2048 particles: 2.05038 seconds
+Best solution found for../Test Cases/test_case_C4.txt:  -4287
+
+GPU execution time for 2048 particles: 2.99098 seconds
+Best solution found for../Test Cases/test_case_C5.txt:  -5117
+
+GPU execution time for 2048 particles: 2.53832 seconds
+Best solution found for../Test Cases/test_case_C6.txt:  -3723
+
+GPU execution time for 2048 particles: 3.29735 seconds
+Best solution found for../Test Cases/test_case_C7.txt:  -4595
+
+
+GPU execution time for 2048 particles: 2.53194 seconds
+Best solution found for../Test Cases/test_case_D1.txt:  -3332
+
+GPU execution time for 2048 particles: 3.49408 seconds
+Best solution found for../Test Cases/test_case_D2.txt:  -5420
+
+GPU execution time for 2048 particles: 3.59052 seconds
+Best solution found for../Test Cases/test_case_D3.txt:  -5549
+
+GPU execution time for 2048 particles: 3.14629 seconds
+Best solution found for../Test Cases/test_case_D4.txt:  -7310
+
+GPU execution time for 2048 particles: 3.59026 seconds
+Best solution found for../Test Cases/test_case_D5.txt:  -7550
+
+GPU execution time for 2048 particles: 3.49016 seconds
+Best solution found for../Test Cases/test_case_D6.txt:  -9129
+
+GPU execution time for 2048 particles: 2.68575 seconds
+Best solution found for../Test Cases/test_case_D7.txt:  -10017
+
+GPU execution time for 2048 particles: 2.64719 seconds
+Best solution found for../Test Cases/test_case_D8.txt:  -10051
+
+GPU execution time for 2048 particles: 2.52381 seconds
+Best solution found for../Test Cases/test_case_D9.txt:  -11195
+
+GPU execution time for 2048 particles: 2.65826 seconds
+Best solution found for../Test Cases/test_case_D10.txt:  -12405
+
+
+GPU execution time for 2048 particles: 5.20815 seconds
+Best solution found for../Test Cases/test_case_E1.txt:  -9160
+
+GPU execution time for 2048 particles: 5.51141 seconds
+Best solution found for../Test Cases/test_case_E2.txt:  -9561
+
+GPU execution time for 2048 particles: 4.96763 seconds
+Best solution found for../Test Cases/test_case_E3.txt:  -15031
+
+GPU execution time for 2048 particles: 5.22234 seconds
+Best solution found for../Test Cases/test_case_E4.txt:  -13402
+
+GPU execution time for 2048 particles: 5.09535 seconds
+Best solution found for../Test Cases/test_case_E5.txt:  -17183
+
+
+GPU execution time for 2048 particles: 21.9343 seconds
+Best solution found for../Test Cases/test_case_F1.txt:  -21250
+
+GPU execution time for 2048 particles: 11.7359 seconds
+Best solution found for../Test Cases/test_case_F2.txt:  -32988
+
+GPU execution time for 2048 particles: 11.636 seconds
+Best solution found for../Test Cases/test_case_F3.txt:  -45627
+
+GPU execution time for 2048 particles: 20.6102 seconds
+Best solution found for../Test Cases/test_case_F4.txt:  -46937
+
+GPU execution time for 2048 particles: 11.5491 seconds
+Best solution found for../Test Cases/test_case_F5.txt:  -56876
+
+

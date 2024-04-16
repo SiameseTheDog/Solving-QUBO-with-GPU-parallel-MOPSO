@@ -1,0 +1,142 @@
+
+GPU execution time for 16384 particles: 13.0214 seconds
+Best solution found for../Test Cases/test_case_A1.txt:  -2071
+
+GPU execution time for 16384 particles: 16.655 seconds
+Best solution found for../Test Cases/test_case_A2.txt:  -4037
+
+GPU execution time for 16384 particles: 12.1038 seconds
+Best solution found for../Test Cases/test_case_A3.txt:  -5992
+
+GPU execution time for 16384 particles: 12.4873 seconds
+Best solution found for../Test Cases/test_case_A4.txt:  -6807
+
+GPU execution time for 16384 particles: 8.32119 seconds
+Best solution found for../Test Cases/test_case_A5.txt:  -3763
+
+GPU execution time for 16384 particles: 8.98485 seconds
+Best solution found for../Test Cases/test_case_A6.txt:  -2697
+
+GPU execution time for 16384 particles: 9.62287 seconds
+Best solution found for../Test Cases/test_case_A7.txt:  -3618
+
+GPU execution time for 16384 particles: 32.2089 seconds
+Best solution found for../Test Cases/test_case_A8.txt:  -6491
+
+
+GPU execution time for 16384 particles: 6.85188 seconds
+Best solution found for../Test Cases/test_case_B1.txt:  -96
+
+GPU execution time for 16384 particles: 8.96308 seconds
+Best solution found for../Test Cases/test_case_B2.txt:  -88
+
+GPU execution time for 16384 particles: 7.72551 seconds
+Best solution found for../Test Cases/test_case_B3.txt:  -84
+
+GPU execution time for 16384 particles: 7.48003 seconds
+Best solution found for../Test Cases/test_case_B4.txt:  -106
+
+GPU execution time for 16384 particles: 16.4571 seconds
+Best solution found for../Test Cases/test_case_B5.txt:  -123
+
+GPU execution time for 16384 particles: 12.241 seconds
+Best solution found for../Test Cases/test_case_B6.txt:  -78
+
+GPU execution time for 16384 particles: 13.7209 seconds
+Best solution found for../Test Cases/test_case_B7.txt:  -117
+
+GPU execution time for 16384 particles: 29.9169 seconds
+Best solution found for../Test Cases/test_case_B8.txt:  -31
+
+GPU execution time for 16384 particles: 16.915 seconds
+Best solution found for../Test Cases/test_case_B9.txt:  -54
+
+GPU execution time for 16384 particles: 33.1884 seconds
+Best solution found for../Test Cases/test_case_B10.txt:  4396
+
+
+GPU execution time for 16384 particles: 6.84521 seconds
+Best solution found for../Test Cases/test_case_C1.txt:  -4329
+
+GPU execution time for 16384 particles: 8.48397 seconds
+Best solution found for../Test Cases/test_case_C2.txt:  -4891
+
+GPU execution time for 16384 particles: 16.821 seconds
+Best solution found for../Test Cases/test_case_C3.txt:  -4770
+
+GPU execution time for 16384 particles: 11.4631 seconds
+Best solution found for../Test Cases/test_case_C4.txt:  -4411
+
+GPU execution time for 16384 particles: 13.2903 seconds
+Best solution found for../Test Cases/test_case_C5.txt:  -6148
+
+GPU execution time for 16384 particles: 14.1668 seconds
+Best solution found for../Test Cases/test_case_C6.txt:  -4743
+
+GPU execution time for 16384 particles: 17.0803 seconds
+Best solution found for../Test Cases/test_case_C7.txt:  -4722
+
+
+GPU execution time for 16384 particles: 16.242 seconds
+Best solution found for../Test Cases/test_case_D1.txt:  -4579
+
+GPU execution time for 16384 particles: 30.802 seconds
+Best solution found for../Test Cases/test_case_D2.txt:  -6690
+
+GPU execution time for 16384 particles: 15.8112 seconds
+Best solution found for../Test Cases/test_case_D3.txt:  -7725
+
+GPU execution time for 16384 particles: 32.046 seconds
+Best solution found for../Test Cases/test_case_D4.txt:  -8441
+
+GPU execution time for 16384 particles: 15.832 seconds
+Best solution found for../Test Cases/test_case_D5.txt:  -8968
+
+GPU execution time for 16384 particles: 15.8124 seconds
+Best solution found for../Test Cases/test_case_D6.txt:  -9529
+
+GPU execution time for 16384 particles: 32.4737 seconds
+Best solution found for../Test Cases/test_case_D7.txt:  -11605
+
+GPU execution time for 16384 particles: 16.2157 seconds
+Best solution found for../Test Cases/test_case_D8.txt:  -12484
+
+GPU execution time for 16384 particles: 17.3061 seconds
+Best solution found for../Test Cases/test_case_D9.txt:  -11998
+
+GPU execution time for 16384 particles: 16.1145 seconds
+Best solution found for../Test Cases/test_case_D10.txt:  -17423
+
+
+GPU execution time for 16384 particles: 60.6015 seconds
+Best solution found for../Test Cases/test_case_E1.txt:  0
+
+GPU execution time for 16384 particles: 33.4246 seconds
+Best solution found for../Test Cases/test_case_E2.txt:  -11354
+
+GPU execution time for 16384 particles: 33.2838 seconds
+Best solution found for../Test Cases/test_case_E3.txt:  -14947
+
+GPU execution time for 16384 particles: 31.3551 seconds
+Best solution found for../Test Cases/test_case_E4.txt:  -16075
+
+GPU execution time for 16384 particles: 35.9299 seconds
+Best solution found for../Test Cases/test_case_E5.txt:  -21825
+
+
+GPU execution time for 16384 particles: 112.186 seconds
+Best solution found for../Test Cases/test_case_F1.txt:  0
+
+GPU execution time for 16384 particles: 97.4547 seconds
+Best solution found for../Test Cases/test_case_F2.txt:  0
+
+GPU execution time for 16384 particles: 103.453 seconds
+Best solution found for../Test Cases/test_case_F3.txt:  0
+
+GPU execution time for 16384 particles: 96.939 seconds
+Best solution found for../Test Cases/test_case_F4.txt:  0
+
+GPU execution time for 16384 particles: 100.093 seconds
+Best solution found for../Test Cases/test_case_F5.txt:  0
+
+
