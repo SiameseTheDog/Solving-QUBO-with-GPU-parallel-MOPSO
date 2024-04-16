@@ -38,6 +38,9 @@ Noriyuki Fujimoto and Kouki Nanai. 2021. Solving QUBO with GPU parallel MOPSO. I
   ```
   To run, use command
   ```
-  ./mopso <TestCaseFileName>
+  ./mopso <TestCaseFileName> <numOfParticles>
   ```
   The test case matrix shoule be in .txt format. The first line in txt file should be the number of rows and starting from the second line, it should list the matrix numbers separated by spaces.
+- cuda/CUDA.sbatch - submit jobs to slurm to find solutions for all matrics. Remember to change the value of numOfParticles
+
+- cuda/result_for_val - results for one node and 4 cores per node.
