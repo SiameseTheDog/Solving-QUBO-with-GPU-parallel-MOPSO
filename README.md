@@ -1,4 +1,4 @@
-# ISYE6679-Project
+
 ## Intruduction
 This is paper replication of:
 
